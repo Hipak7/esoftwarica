@@ -1,4 +1,4 @@
-package com.novc21.esoftwarica.fragment;
+package com.hipak.esoftwarica.fragment;
 
 
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.webkit.WebViewClient;
 
 import androidx.fragment.app.Fragment;
 
-import com.novc21.esoftwarica.R;
+import com.hipak.esoftwarica.R;
 
 /**
  * A simple {@link Fragment} subclass.

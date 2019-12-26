@@ -1,4 +1,4 @@
-package com.novc21.esoftwarica.fragment;
+package com.hipak.esoftwarica.fragment;
 
 
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.novc21.esoftwarica.MainActivity;
-import com.novc21.esoftwarica.R;
-import com.novc21.esoftwarica.adapter.StudentsAdapter;
+import com.hipak.esoftwarica.MainActivity;
+import com.hipak.esoftwarica.R;
+import com.hipak.esoftwarica.adapter.StudentsAdapter;
 
 /**
  * A simple {@link Fragment} subclass.

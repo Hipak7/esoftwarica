@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.novc21.esoftwarica">
+    package="com.hipak.esoftwarica">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon1"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".EditStudent"
+        <activity android:name="com.hipak.esoftwarica.EditStudent"
             android:theme="@style/AppTheme.CustomTheme"></activity>
         <activity
-            android:name=".LoginActivity"
+            android:name="com.hipak.esoftwarica.LoginActivity"
             android:windowSoftInputMode="adjustPan|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.hipak.esoftwarica.MainActivity"
             android:windowSoftInputMode="adjustPan|adjustResize" />
     </application>
 

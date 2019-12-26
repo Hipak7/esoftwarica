@@ -1,4 +1,4 @@
-package com.novc21.esoftwarica.adapter;
+package com.hipak.esoftwarica.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,8 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.novc21.esoftwarica.EditStudent;
-import com.novc21.esoftwarica.R;
+import com.hipak.esoftwarica.EditStudent;
+import com.hipak.esoftwarica.R;
 
 import java.util.List;
 

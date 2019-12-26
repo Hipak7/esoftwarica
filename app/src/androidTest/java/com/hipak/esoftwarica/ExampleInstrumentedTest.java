@@ -1,4 +1,4 @@
-package com.novc21.esoftwarica;
+package com.hipak.esoftwarica;
 
 import android.content.Context;
 

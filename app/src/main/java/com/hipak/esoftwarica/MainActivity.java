@@ -1,4 +1,4 @@
-package com.novc21.esoftwarica;
+package com.hipak.esoftwarica;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -8,10 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.novc21.esoftwarica.adapter.Students;
-import com.novc21.esoftwarica.fragment.AboutFragment;
-import com.novc21.esoftwarica.fragment.AddFragment;
-import com.novc21.esoftwarica.fragment.HomeFragment;
+import com.hipak.esoftwarica.adapter.Students;
+import com.hipak.esoftwarica.fragment.AboutFragment;
+import com.hipak.esoftwarica.fragment.AddFragment;
+import com.hipak.esoftwarica.fragment.HomeFragment;
 
 import java.util.ArrayList;
 import java.util.List;
