@@ -68,5 +68,23 @@ public class AddFragment extends Fragment implements RadioGroup.OnCheckedChangeL
         }
     }
 
-
+    private boolean validate() {
+        if (TextUtils.isEmpty(etName.getText())) {
+            etName.setError("Enter full name");
+            etName.requestFocus();
+            return false;
+        } else if (TextUtils.isEmpty(etAge.getText())) {
+            etAge.setError("Enter the age");
+            etAge.requestFocus();
+            return false;
+        } else if (TextUtils.isEmpty(etAddress.getText())) {
+            etAddress.setError("Enter the address");
+            etAddress.requestFocus();
+            return false;
+        } else if (TextUtils.isEmpty(gender)) {
+            Toast.makeText(getContext(), "Select gender", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 }

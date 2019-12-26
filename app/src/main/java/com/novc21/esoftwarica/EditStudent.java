@@ -107,7 +107,16 @@ public class EditStudent extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     @Override
-
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        if (checkedId == R.id.rbReMale) {
+            gender = "male";
+        }
+        if (checkedId == R.id.rbReFemale) {
+            gender = "female";
+        }
+        if (checkedId == R.id.rbReOther) {
+            gender = "other";
+        }
     }
 }
 

@@ -38,7 +38,17 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             Fragment selectedFragment = null;
 
-
+            switch (menuItem.getItemId()){
+                case R.id.navHome:
+                    selectedFragment = new HomeFragment();
+                    break;
+                case R.id.navAddStudent:
+                    selectedFragment = new AddFragment();
+                    break;
+                case R.id.navAboutUs:
+                    selectedFragment = new AboutFragment();
+                    break;
+            }
 
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
         return true;
