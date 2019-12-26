@@ -26,9 +26,9 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
         if (studentsList.isEmpty()) {
-            studentsList.add(new Students("raz nibbles", "male", "China, beijing", 18));
-            studentsList.add(new Students("james fagnan", "female", "USA, New York", 22));
-            studentsList.add(new Students("john Cobern", "other", "Australia, Sydney", 19));
+            studentsList.add(new Students("Raaj Kayastha ", "male", "Nepal, Kathmandu", 20));
+            studentsList.add(new Students("Prakriti Pradhan", "female", "USA, New York", 19));
+            studentsList.add(new Students("Anita Shrestha", "female", "Australia, Sydney", 21));
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
     }
