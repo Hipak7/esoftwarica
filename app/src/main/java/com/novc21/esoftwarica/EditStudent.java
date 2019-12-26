@@ -47,6 +47,76 @@ public class EditStudent extends AppCompatActivity implements RadioGroup.OnCheck
         etReAge.setText(MainActivity.studentsList.get(index).getAge() + "");
         etReAddress.setText(MainActivity.studentsList.get(index).getAddress());
         gender = MainActivity.studentsList.get(index).getGender();
+        if (gender == "male") {
+            rbReMale.setChecked(true);
+            rbReFemale.setChecked(false);
+            rbReOther.setChecked(false);
+        } else if (gender == "female") {
+            rbReMale.setChecked(false);
+            rbReFemale.setChecked(true);
+            rbReOther.setChecked(false);
+        }
+        if (gender == "other") {
+            rbReMale.setChecked(false);
+            rbReFemale.setChecked(false);
+            rbReOther.setChecked(true);
+        }
+        rgReGender.setOnCheckedChangeListener(this);
+        btnReSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (validate()) {
+                    name = etReName.getText().toString();
+                    address = etReAddress.getText().toString();
+                    age = Integer.parseInt(etReAge.getText().toString());
+                    try {
+                        MainActivity.studentsList.get(index).setName(name);
+                        MainActivity.studentsList.get(index).setAddress(address);
+                        MainActivity.studentsList.get(index).setAge(age);
+                        MainActivity.studentsList.get(index).setGender(gender);
+                        Toast.makeText(EditStudent.this, "Student updated", Toast.LENGTH_SHORT).show();
+                        finish();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                        Toast.makeText(EditStudent.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
 
+    }
+
+    private boolean validate() {
+        if (TextUtils.isEmpty(etReName.getText())) {
+            etReName.setError("Enter full name");
+            etReName.requestFocus();
+            return false;
+        } else if (TextUtils.isEmpty(etReAge.getText())) {
+            etReAge.setError("Enter the age");
+            etReAge.requestFocus();
+            return false;
+        } else if (TextUtils.isEmpty(etReAddress.getText())) {
+            etReAddress.setError("Enter the address");
+            etReAddress.requestFocus();
+            return false;
+        } else if (TextUtils.isEmpty(gender)) {
+            Toast.makeText(EditStudent.this, "Select gender", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        if (checkedId == R.id.rbReMale) {
+            gender = "male";
+        }
+        if (checkedId == R.id.rbReFemale) {
+            gender = "female";
+        }
+        if (checkedId == R.id.rbReOther) {
+            gender = "other";
+        }
+    }
 }
 
